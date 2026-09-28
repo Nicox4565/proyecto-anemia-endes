@@ -5,7 +5,7 @@ import joblib
 # 1. Configuración de la página
 st.set_page_config(page_title="Triaje Predictivo", page_icon="🩸", layout="centered")
 
-st.title("🩺 Sistema Inteligente Ensamblado: Riesgo de Anemia")
+st.title("🩺 Aplicativo Ensamblado: Riesgo de Anemia")
 st.write("Esta herramienta utiliza un **Ensamble Algorítmico (Votación Suave)** que combina el análisis estadístico de una Regresión Logística con el reconocimiento geométrico de fenotipos del K-Nearest Neighbors.")
 
 # 2. Cargar los modelos
@@ -71,11 +71,11 @@ if st.button("Calcular Riesgo Integrado", type="primary", use_container_width=Tr
     umbral_clinico = 0.40 
     
     if prob_final >= umbral_clinico:
-        st.error(f"⚠️ **RIESGO ALTO:** El sistema ensamblado determina una probabilidad predictiva de anemia del **{prob_final:.1%}**.")
+        st.error(f"⚠️ **RIESGO ALTO:** El modelo ensamblado determina una probabilidad predictiva de anemia del **{prob_final:.1%}**.")
         st.write("📌 **Recomendación Clínica:** Derivar de forma prioritaria a laboratorio para extracción de sangre y tamizaje de hemoglobina.")
     else:
-        st.success(f"✅ **RIESGO BAJO:** El sistema ensamblado determina una probabilidad predictiva de anemia del **{prob_final:.1%}**.")
+        st.success(f"✅ **RIESGO BAJO:** El modelo ensamblado determina una probabilidad predictiva de anemia del **{prob_final:.1%}**.")
         st.write("📌 **Recomendación Clínica:** Atención regular de triaje. No requiere prioridad urgente en laboratorio.")
 
 st.markdown("---")
-st.caption("Consideración Ética: Este artefacto tecnológico utiliza Machine Learning para investigación académica (Design Science Research) y no sustituye el diagnóstico hematológico definitivo.")
+st.caption("Consideración Ética: Este modelo tecnológico utiliza Machine Learning para investigación académica (Design Science Research) y no sustituye el diagnóstico hematológico definitivo.")
